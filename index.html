@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Snake Game</title>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="page.css" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	<body>
+
+<div class="wrapper"> 
+			<h1 id="title">Snake</h1>
+				<p><a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> variation of the classic <a href="http://en.wikipedia.org/wiki/Snake_(video_game)">snake game</a>.</p>
+	
+		<button id="newGame">Start!</button> 
+		<div id="playingCanvas">
+
+	  		<canvas id="the-game" width="640" height="480">
+		</div>
+		
+<div class="container"> 
+	<div class="row"> 
+		<div class="col-md-6"> 
+			<div class="pull-left" id="scoreBox">
+				
+					<div id="score">
+						<div id="playerScore"> 
+							<h4>Your Score</h4> 
+							<p id="currentScore"></p> 
+						</div>
+						<div id="hiScore">
+							<h4>Hi-Score</h4> 
+							<p id="highScores">650</p>
+						</div> 
+						<div id="currentDifficulty"> 
+							<h4>Difficulty</h4>
+							<p id="diffSetting">Normal</p> 
+							
+						</div>
+					</div> 
+			</div> 
+			<div class="col-md-6" id="difficulty">
+				<ul> 
+				<li><button id="easy">Easy</button></li>
+				<li><button id="normal">Normal</button></li>
+				<li><button id="hard">Hard</button></li>
+				<li><button id="insane">Insane</button></li>
+				</ul> 
+			</div> 
+		
+		</div>
+		</div>
+	</div> 
+</div> 
+
+
+
+
+
+		<script type="text/javascript" src="game.js"></script>
+	</body>
+</html>
