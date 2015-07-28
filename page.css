@@ -40,13 +40,16 @@ canvas {
 	background-color: #FFFFFF; 
 	border: solid;
 	border-width: 2px; 
-
 	width: 160px; 
 	height: 200px; 
+	margin-left: 40%; 
+	text-align: center;
 }
 
 #difficulty {
-	margin-left: 335px; 
+	margin-left: 25px; 
+	
+
 }
 
 #difficulty li {
@@ -55,6 +58,7 @@ canvas {
 } 
 
 #difficulty button {
+	
 	height: 30px;
 	width: 160px; 
 } 

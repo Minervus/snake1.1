@@ -179,38 +179,40 @@ function toHighScoreList() {
 
 console.log("Game Speed is:" + game.fps); 
 
-var easy = document.getElementById("easy"); 
-var normal = document.getElementById("normal"); 
-var hard = document.getElementById("hard"); 
-var insane = document.getElementById("insane"); 
-
-easy.addEventListener("click", setEasy); 
-normal.addEventListener("click", setNormal); 
-hard.addEventListener("click", setHard); 
-insane.addEventListener("click", setInsane); 
-
-function setEasy() {
+gameState = {
+  
+  setEasy: function(){
   game.fps = 10; 
   console.log("Game Speed is:" + game.fps); 
   document.getElementById("diffSetting").innerHTML = "Easy Mode"; 
-  document.body.style.backgroundImage = "url('images/green.png')"; 
-}
+  document.body.style.backgroundImage = "url('images/green.png')";
+  document.getElementById("title").innerHTML = "Snake"; 
+  document.getElementById("title").style.color = '#000000';
+  document.getElementById("title").style.fontSize = '36px'; 
 
-function setNormal() {
+},
+
+  setNormal: function(){
   game.fps = 20; 
   console.log("Game Speed is:" + game.fps);
   document.getElementById("diffSetting").innerHTML = "Normal"; 
-  document.body.style.backgroundImage = "url('images/green.png')";   
-}
+  document.body.style.backgroundImage = "url('images/green.png')";
+  document.getElementById("title").innerHTML = "Snake";   
+  document.getElementById("title").style.color = '#000000'; 
+  document.getElementById("title").style.fontSize = '36px'; 
+},
 
-function setHard() {
+  setHard: function(){
   game.fps = 30; 
   console.log("Game Speed is:" + game.fps); 
   document.getElementById("diffSetting").innerHTML = "Hard"; 
   document.body.style.backgroundImage = "url('images/green.png')"; 
-}
+  document.getElementById("title").innerHTML = "Snake"; 
+  document.getElementById("title").style.color = '#000000';
+  document.getElementById("title").style.fontSize = '36px'; 
+},
 
-function setInsane() {
+  setInsane: function(){
   game.fps = 40; 
   console.log("Game Speed is:" + game.fps); 
   document.getElementById("diffSetting").innerHTML = "INSANE!";
@@ -220,6 +222,29 @@ function setInsane() {
   document.getElementById("title").style.fontSize = '60px'; 
   document.getElementById("title").style.fontWeight = 'bold'; 
 }
+
+};
+
+
+
+
+
+var easy = document.getElementById("easy"); 
+var normal = document.getElementById("normal"); 
+var hard = document.getElementById("hard"); 
+var insane = document.getElementById("insane"); 
+
+easy.addEventListener("click", gameState.setEasy); 
+normal.addEventListener("click", gameState.setNormal); 
+hard.addEventListener("click", gameState.setHard); 
+insane.addEventListener("click", gameState.setInsane); 
+
+
+
+
+
+
+
 
 
 food = {
