@@ -17,12 +17,17 @@ game = {
     game.fps = 8; //game speed! Difficulty 
     snake.init();
     food.set();
+    
+    console.log((document.getElementById("highScores").innerHTML));
 
+    
   },
   
   stop: function() { // Stop game and display message
     game.over = true;
+    scoreBox.checkScore(); 
     game.message = 'Game Over!';
+    
   },
   
   drawBox: function(x, y, size, color) {
@@ -177,6 +182,23 @@ function toHighScoreList() {
 }
 */
 
+scoreBox = {
+  score: game.score,
+  highScore: parseInt(document.getElementById("highScores").innerHTML), 
+
+  checkScore: function(){
+    if(game.score > this.highScore) {
+      this.highScore = game.score; 
+      console.log("this is the new score: " + this.highScore); 
+      document.getElementById("highScores").innerHTML = this.highScore; 
+    }
+  }
+
+}; 
+
+
+
+
 console.log("Game Speed is:" + game.fps); 
 
 gameState = {
@@ -257,6 +279,7 @@ food = {
     food.size = snake.size;
     food.x = (Math.ceil(Math.random() * 10) * snake.size * 4) - snake.size / 2;
     food.y = (Math.ceil(Math.random() * 10) * snake.size * 3) - snake.size / 2;
+
   },
   
   draw: function() { // Draws food in the location made by set: function() above. 
