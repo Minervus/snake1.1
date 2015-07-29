@@ -156,7 +156,7 @@ snake = {
   
 };
 
-document.getElementById("newGame").addEventListener("click", game.start); 
+//document.getElementById("newGame").addEventListener("click", game.start); 
 
 /*
 var score = game.score; 
