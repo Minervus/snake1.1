@@ -204,7 +204,7 @@ console.log("Game Speed is:" + game.fps);
 gameState = {
   
   setEasy: function(){
-  game.fps = 10; 
+  game.fps = 5; 
   console.log("Game Speed is:" + game.fps); 
   document.getElementById("diffSetting").innerHTML = "Easy Mode"; 
   document.body.style.backgroundImage = "url('images/green.png')";
@@ -225,7 +225,7 @@ gameState = {
 },
 
   setHard: function(){
-  game.fps = 30; 
+  game.fps = 25; 
   console.log("Game Speed is:" + game.fps); 
   document.getElementById("diffSetting").innerHTML = "Hard"; 
   document.body.style.backgroundImage = "url('images/green.png')"; 
@@ -235,7 +235,7 @@ gameState = {
 },
 
   setInsane: function(){
-  game.fps = 40; 
+  game.fps = 35; 
   console.log("Game Speed is:" + game.fps); 
   document.getElementById("diffSetting").innerHTML = "INSANE!";
   document.body.style.backgroundImage = "url('images/fire1bg.png')"; 
